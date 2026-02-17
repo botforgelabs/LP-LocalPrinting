@@ -1,54 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LP – Local Printing</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f8ff;
+            color: #1a1a1a;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .section {
+            background-color: white;
+            margin: 30px auto;
+            padding: 30px;
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1976d2;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #0d47a1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0d47a1;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <h1>LP – Local Printing</h1>
-            <p>Student-Run 3D Printing Service – Turn Your Ideas into Real Objects</p>
-            <a href="#contact" class="btn">Get a Quote</a>
-        </div>
-    </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>LP – Local Printing is a student-run 3D printing service providing affordable, reliable, and precise prints for school projects, robotics, hobbies, and custom designs. Every print is carefully prepared and checked to ensure clean, accurate results. We make manufacturing accessible and local for our community.</p>
-    </section>
+<header>
+    <h1>LP – Local Printing</h1>
+    <p>Affordable Local 3D Printing – Pay at Doorstep & Preview Before You Buy</p>
+</header>
 
-    <section id="services">
-        <h2>What We Offer</h2>
-        <ul>
-            <li>School projects</li>
-            <li>Robotics & hobby parts</li>
-            <li>Replacement pieces</li>
-            <li>Custom gifts</li>
-            <li>Prototypes</li>
-        </ul>
-    </section>
+<div class="section">
+    <h2>How It Works</h2>
+    <p>
+        Send your 3D file to our email as a <span class="highlight">.3MF file</span>.
+        We print your model and deliver it locally.
+        You <span class="highlight">preview the finished print at your doorstep</span>
+        before paying. Payment is made at delivery.
+    </p>
+</div>
 
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <p>$0.15 per gram of filament used</p>
-        <p>Minimum order: $5</p>
-        <p>Basic design help available for a small extra fee</p>
-    </section>
+<div class="section">
+    <h2>Pricing</h2>
+    <ul>
+        <li>$0.15 per gram of filament used</li>
+        <li>Minimum order: $5</li>
+        <li>Basic model design service: +$5 (simple shapes and basic models only)</li>
+    </ul>
+    <p>
+        Complex engineering designs, moving mechanisms, or advanced models may be declined.
+        If a model is too difficult or unsuitable for printing, you will be informed before any work begins.
+    </p>
+</div>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:tedster@outlook.com.au">tedster@outlook.com.au</a></p>
-        <p>Phone: 0492 907 293</p>
-        <p>Or scan the QR code below:</p>
-        <img src="images/qr-code.png" alt="QR Code">
-    </section>
+<div class="section">
+    <h2>If a Print Fails</h2>
+    <p>
+        3D printing can sometimes fail due to design errors or technical limits.
+        If the print fails due to a machine issue, it will be reprinted at no extra cost.
+        If the file itself causes repeated failures, we will contact you to adjust the design.
+    </p>
+</div>
 
-    <footer>
-        <p>&copy; 2026 LP – Local Printing. All rights reserved.</p>
-        <p>Reliable • Precise • Local</p>
-    </footer>
+<div class="section">
+    <h2>Rules & File Requirements</h2>
+    <ul>
+        <li>Files must be submitted as .3MF format</li>
+        <li>No weapons, guns, knives, or harmful objects</li>
+        <li>Local area delivery only</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Contact</h2>
+    <p><strong>Phone (Support Only):</strong> 0492 907 293</p>
+    <p><strong>Email (Send Files Here):</strong> tedster@outlook.com.au</p>
+</div>
+
+<footer>
+    LP – Local Printing | Reliable • Affordable • Local
+</footer>
+
 </body>
 </html>
+
