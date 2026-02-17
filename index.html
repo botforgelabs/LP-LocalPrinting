@@ -3,59 +3,95 @@
 <head>
     <title>LP – Local Printing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f8ff;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #eaf3ff, #ffffff);
             color: #1a1a1a;
         }
 
         header {
-            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            background: linear-gradient(135deg, #0d47a1, #2196f3);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
         header h1 {
+            font-size: 48px;
             margin: 0;
-            font-size: 42px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: white;
+            color: #0d47a1;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #bbdefb;
+            transform: scale(1.05);
         }
 
         .section {
-            background-color: white;
-            margin: 30px auto;
-            padding: 30px;
+            background: white;
+            margin: 40px auto;
+            padding: 40px;
             max-width: 900px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         h2 {
             color: #1976d2;
+            margin-top: 0;
         }
 
         ul {
             line-height: 1.8;
         }
 
-        .highlight {
-            font-weight: bold;
-            color: #0d47a1;
+        .calculator input {
+            padding: 10px;
+            font-size: 16px;
+            width: 120px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        .calculator button {
+            padding: 10px 15px;
+            background: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .calculator button:hover {
+            background: #0d47a1;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #0d47a1;
+            padding: 30px;
+            background: #0d47a1;
             color: white;
-            margin-top: 40px;
+            margin-top: 60px;
         }
     </style>
 </head>
@@ -63,16 +99,17 @@
 
 <header>
     <h1>LP – Local Printing</h1>
-    <p>Affordable Local 3D Printing – Pay at Doorstep & Preview Before You Buy</p>
+    <p>Affordable Local 3D Printing | Pay at Doorstep | Preview Before You Buy</p>
+    <a class="button" href="mailto:tedster@outlook.com.au">Send Your 3MF File</a>
 </header>
 
 <div class="section">
     <h2>How It Works</h2>
     <p>
-        Send your 3D file to our email as a <span class="highlight">.3MF file</span>.
-        We print your model and deliver it locally.
-        You <span class="highlight">preview the finished print at your doorstep</span>
-        before paying. Payment is made at delivery.
+        Email your design as a <strong>.3MF file</strong>.
+        Your model is printed and delivered locally.
+        You preview it at your doorstep before paying.
+        Payment is made at delivery.
     </p>
 </div>
 
@@ -81,42 +118,57 @@
     <ul>
         <li>$0.15 per gram of filament used</li>
         <li>Minimum order: $5</li>
-        <li>Basic model design service: +$5 (simple shapes and basic models only)</li>
+        <li>Basic model design: +$5 (simple shapes only)</li>
     </ul>
-    <p>
-        Complex engineering designs, moving mechanisms, or advanced models may be declined.
-        If a model is too difficult or unsuitable for printing, you will be informed before any work begins.
-    </p>
+
+    <div class="calculator">
+        <h3>Price Estimator</h3>
+        <p>Enter weight in grams:</p>
+        <input type="number" id="grams" placeholder="grams">
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+    </div>
 </div>
 
 <div class="section">
     <h2>If a Print Fails</h2>
     <p>
-        3D printing can sometimes fail due to design errors or technical limits.
-        If the print fails due to a machine issue, it will be reprinted at no extra cost.
-        If the file itself causes repeated failures, we will contact you to adjust the design.
+        If a print fails due to machine issues, it will be reprinted at no extra cost.
+        If the file design causes repeated failures, you will be contacted before continuing.
+        Very complex or unsuitable models may be declined.
     </p>
 </div>
 
 <div class="section">
-    <h2>Rules & File Requirements</h2>
+    <h2>Rules</h2>
     <ul>
-        <li>Files must be submitted as .3MF format</li>
-        <li>No weapons, guns, knives, or harmful objects</li>
-        <li>Local area delivery only</li>
+        <li>.3MF files only</li>
+        <li>No guns, knives, or weapons</li>
+        <li>Local delivery only</li>
     </ul>
 </div>
 
 <div class="section">
     <h2>Contact</h2>
-    <p><strong>Phone (Support Only):</strong> 0492 907 293</p>
-    <p><strong>Email (Send Files Here):</strong> tedster@outlook.com.au</p>
+    <p><strong>Support Phone:</strong> 0492 907 293</p>
+    <p><strong>Send Files:</strong> tedster@outlook.com.au</p>
 </div>
 
 <footer>
     LP – Local Printing | Reliable • Affordable • Local
 </footer>
 
+<script>
+function calculate() {
+    var grams = document.getElementById("grams").value;
+    var price = grams * 0.15;
+    if (price < 5) {
+        price = 5;
+    }
+    document.getElementById("result").innerHTML =
+        "Estimated Price: $" + price.toFixed(2);
+}
+</script>
+
 </body>
 </html>
-
